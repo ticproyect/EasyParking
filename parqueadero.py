@@ -1,7 +1,7 @@
 from datetime import datetime
 from usuario import usuario
 from vehiculo import vehiculo
-
+from puesto import puesto
 class Parqueadero:
     def __init__(self, nombre:str, filas:int, columnas: int) -> None:
         if filas == columnas:
@@ -41,45 +41,11 @@ class Parqueadero:
     
     def asignar_puesto(self, preferencia:str, usuario: usuario):
         puesto = None
-        if self.filas == 6:
-            if preferencia in self.precio.keys():  
-                if preferencia == "bajo":
-                    for fila in range(self.filas):
-                        for columna in range(self.columnas):
-                            if self.puesto[fila][columna] is None:
-                                if (fila >= self.filas/2 - 1 and columna >= self.columnas/2 -1) and (fila <= self.filas/2 and columna <= self.columna/2):
-                                      puesto = self.letras_filas.index(fila) + columna
-                                      break
-                elif preferencia == "medio":
-                    for fila in range(self.filas):
-                        for columna in range(self.columnas):
-                            if self.puestos[fila][columna] is None:
-                                if (fila < self.filas - 1 and columna < self.columnas - 1 ) and (fila < self.filas/2 - 1 and columna < self.columnas/2 -1) and (fila > self.filas/2 and columna > self.columna/2):
-                                    puesto = self.letras_filas.index(fila) + columna
-                                    break
-                elif preferencia == "alto":
-                    for fila in range(self.filas):
-                        for columna in range(self.columnas):
-                            if self.puestos[fila][columna] is None:
-                                if fila == 0 or columna == 
-
-
-
+        pass
+                                
                                 
 
-
-                            
-
-
-
-
-
-
-
-                    
-            
-
-    def consultar_puesto(self):
+    def consultar_puesto(self, fila: int, columna: int):
         pass
 
     def monto_pagar(self):
